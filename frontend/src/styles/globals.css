@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-base:      #0a0e1a;
+  --bg-surface:   #0f1424;
+  --bg-card:      #141929;
+  --bg-card-hover:#182033;
+  --bg-elevated:  #1c2438;
+  --bg-overlay:   #222d42;
+
+  --border:       rgba(255,255,255,0.06);
+  --border-mid:   rgba(255,255,255,0.10);
+  --border-hi:    rgba(255,255,255,0.16);
+
+  --text-primary:   #f0f4ff;
+  --text-secondary: #8896b3;
+  --text-muted:     #4e5c7a;
+  --text-hint:      #2e3a54;
+
+  --accent:         #3b82f6;
+  --accent-hover:   #2563eb;
+  --accent-dim:     rgba(59,130,246,0.12);
+  --accent-border:  rgba(59,130,246,0.30);
+
+  --success:        #22c55e;
+  --success-dim:    rgba(34,197,94,0.12);
+  --success-border: rgba(34,197,94,0.30);
+
+  --warning:        #f59e0b;
+  --warning-dim:    rgba(245,158,11,0.12);
+  --warning-border: rgba(245,158,11,0.30);
+
+  --danger:         #ef4444;
+  --danger-dim:     rgba(239,68,68,0.12);
+  --danger-border:  rgba(239,68,68,0.30);
+
+  --emergency:      #ff3b3b;
+  --emergency-dim:  rgba(255,59,59,0.15);
+  --emergency-border: rgba(255,59,59,0.40);
+
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-xl:  18px;
+  --radius-2xl: 24px;
+
+  --font: 'Manrope', -apple-system, sans-serif;
+  --transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+}
+
+html { font-size: 15px; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--bg-elevated); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bg-overlay); }
+
+input, select, textarea {
+  font-family: var(--font);
+  font-size: 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color var(--transition);
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+input::placeholder, textarea::placeholder { color: var(--text-muted); }
+select option { background: var(--bg-elevated); }
+
+button {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+button:active { transform: scale(0.98); }
+
+a { color: var(--accent); text-decoration: none; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes emergencyFlash { 0%,100% { border-color: var(--emergency-border); } 50% { border-color: var(--emergency); } }
+
+.fade-in { animation: fadeIn 0.3s ease both; }
+.slide-in { animation: slideIn 0.25s ease both; }

@@ -1,0 +1,1 @@
+Doctors and Admin cannot self-registered so after the above steps, we'll build add doctor deature in admin panel 
