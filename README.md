@@ -2,31 +2,32 @@ A full-stack healthcare management solution designed to streamline hospital oper
 
 
 ✨ Key Features:
-👤 Patient Module
+👤 Patient Module:
 Book appointments online
 Generate and track token numbers
 View estimated waiting times
 Receive real-time queue updates
 
-👨‍⚕️ Doctor Module
+👨‍⚕️ Doctor Module:
 Manage patient consultation queue
 Update consultation status
 Prioritize emergency patients
 Monitor daily appointments
 
-🏥 Admin Module
+🏥 Admin Module:
 Manage hospital departments
 Monitor patient load across departments
 Assign and manage doctors
 Optimize scheduling and resource allocation
 
+
 🚀 Advanced Features
-Dynamic queue management
-Emergency patient prioritization
-Real-time status updates
-Doctor load balancing
-JWT-based authentication and authorization
-Analytics dashboard
+- Dynamic queue management
+- Emergency patient prioritization
+- Real-time status updates
+- Doctor load balancing
+- JWT-based authentication and authorization
+- Analytics dashboard
 
 
 🛠️ Tech Stack: 
@@ -35,7 +36,6 @@ Frontend: React.js, Tailwind CSS
 Database: PostgreSQL
 API: RESTful APIs
 Tools & Utilities: Maven, Postman, Git & GitHub
-
 
 
 🔄 Workflow
